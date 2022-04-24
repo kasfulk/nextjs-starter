@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && prisma migrate deploy && next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "vercel-build": "cp -rf ./prisma/alqomus.db /var/task/node_modules/.prisma/client/./alqomus.db && prisma generate && next build"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.12.0",
+    "better-sqlite3": "^7.5.1",
+    "date-fns": "^2.11.1",
+    "gray-matter": "^4.0.2",
+    "next": "^12.1.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "remark": "^14.0.1",
+    "remark-html": "^15.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.3",
+    "@types/react": "^17.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.4.0",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "prisma": "^3.12.0",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.3.5"
+  }
+}
